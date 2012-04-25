@@ -10,12 +10,14 @@
 
     ArcherFactory.name = 'ArcherFactory';
 
-    function ArcherFactory() {
-      ArcherFactory.__super__.constructor.call(this, "Archer Factory", 100, 10, 10);
+    function ArcherFactory(o) {
+      ArcherFactory.__super__.constructor.call(this, "Archer Factory", 100, 10, 10, o);
     }
 
     return ArcherFactory;
 
   })(Factory);
+
+  window.ArcherFactory = ArcherFactory;
 
 }).call(this);

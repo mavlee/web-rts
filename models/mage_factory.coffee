@@ -1,3 +1,5 @@
 class MageFactory extends Factory
-  constructor: () ->
-    super("Mage Factory", 100, 10, 10)
+  constructor: (o) ->
+    super("Mage Factory", 100, 10, 10, o)
+
+window.MageFactory = MageFactory

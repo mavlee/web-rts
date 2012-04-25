@@ -10,12 +10,14 @@
 
     Archer.name = 'Archer';
 
-    function Archer() {
-      Archer.__super__.constructor.call(this, "Archer", 100, 10, 10, 10, 10);
+    function Archer(o) {
+      Archer.__super__.constructor.call(this, "Archer", 100, 10, 10, 10, 10, o);
     }
 
     return Archer;
 
   })(Unit);
+
+  window.Archer = Archer;
 
 }).call(this);

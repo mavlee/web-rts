@@ -6,11 +6,12 @@
 
     Factory.name = 'Factory';
 
-    function Factory(name, l, st, bcd) {
+    function Factory(name, l, st, bcd, o) {
       this.name = name;
       this.life = l;
       this.spawn_time = st;
       this.build_cooldown = bcd;
+      this.owner_id = o;
     }
 
     Factory.prototype.life = 0;
@@ -19,8 +20,12 @@
 
     Factory.prototype.build_cooldown = 0;
 
+    Factory.prototype.owner_id = 0;
+
     return Factory;
 
   })();
+
+  window.Factory = Factory;
 
 }).call(this);

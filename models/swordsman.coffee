@@ -1,3 +1,5 @@
 class Swordsman extends Unit
-  constructor: () ->
-    super("Swordsman", 100, 10, 10, 10, 10)
+  constructor: (o) ->
+    super("Swordsman", 100, 10, 10, 10, 10, o)
+
+window.Swordsman = Swordsman

@@ -1,3 +1,5 @@
 class SwordsmanFactory extends Factory
-  constructor: () ->
-    super("Swordsman Factory", 100, 10, 10)
+  constructor: (o) ->
+    super("Swordsman Factory", 100, 10, 10, o)
+
+window.SwordsmanFactory = SwordsmanFactory

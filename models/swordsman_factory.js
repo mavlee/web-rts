@@ -10,12 +10,14 @@
 
     SwordsmanFactory.name = 'SwordsmanFactory';
 
-    function SwordsmanFactory() {
-      SwordsmanFactory.__super__.constructor.call(this, "Swordsman Factory", 100, 10, 10);
+    function SwordsmanFactory(o) {
+      SwordsmanFactory.__super__.constructor.call(this, "Swordsman Factory", 100, 10, 10, o);
     }
 
     return SwordsmanFactory;
 
   })(Factory);
+
+  window.SwordsmanFactory = SwordsmanFactory;
 
 }).call(this);

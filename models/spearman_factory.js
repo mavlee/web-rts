@@ -10,12 +10,14 @@
 
     SpearmanFactory.name = 'SpearmanFactory';
 
-    function SpearmanFactory() {
-      SpearmanFactory.__super__.constructor.call(this, "Spearman Factory", 100, 10, 10);
+    function SpearmanFactory(o) {
+      SpearmanFactory.__super__.constructor.call(this, "Spearman Factory", 100, 10, 10, o);
     }
 
     return SpearmanFactory;
 
   })(Factory);
+
+  window.SpearmanFactory = SpearmanFactory;
 
 }).call(this);

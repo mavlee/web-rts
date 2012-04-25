@@ -10,12 +10,14 @@
 
     Spearman.name = 'Spearman';
 
-    function Spearman() {
-      Spearman.__super__.constructor.call(this, "Spearman", 100, 10, 10, 10, 10);
+    function Spearman(o) {
+      Spearman.__super__.constructor.call(this, "Spearman", 100, 10, 10, 10, 10, o);
     }
 
     return Spearman;
 
   })(Unit);
+
+  window.Spearman = Spearman;
 
 }).call(this);

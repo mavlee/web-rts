@@ -1,3 +1,5 @@
 class Archer extends Unit
-  constructor: () ->
-    super("Archer", 100, 10, 10, 10, 10)
+  constructor: (o) ->
+    super("Archer", 100, 10, 10, 10, 10, o)
+
+window.Archer = Archer

@@ -6,13 +6,14 @@
 
     Unit.name = 'Unit';
 
-    function Unit(name, l, d, ms, ar, as) {
+    function Unit(name, l, d, ms, ar, as, o) {
       this.name = name;
       this.life = l;
       this.damage = d;
       this.move_speed = ms;
       this.attack_range = ar;
       this.attack_speed = as;
+      this.owner_id = o;
     }
 
     Unit.prototype.life = 0;
@@ -25,8 +26,12 @@
 
     Unit.prototype.attack_speed = 0;
 
+    Unit.prototype.owner_id = 0;
+
     return Unit;
 
   })();
+
+  window.Unit = Unit;
 
 }).call(this);

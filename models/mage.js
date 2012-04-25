@@ -10,12 +10,14 @@
 
     Mage.name = 'Mage';
 
-    function Mage() {
-      Mage.__super__.constructor.call(this, "Mage", 100, 10, 10, 10, 10);
+    function Mage(o) {
+      Mage.__super__.constructor.call(this, "Mage", 100, 10, 10, 10, 10, o);
     }
 
     return Mage;
 
   })(Unit);
+
+  window.Mage = Mage;
 
 }).call(this);
