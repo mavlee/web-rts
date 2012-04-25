@@ -1,9 +1,21 @@
-<h1>BLAHBLAH</h1>
-<script src="lib/socket.io.js"></script>
-<script>
-  var socket = io.connect('http://localhost:8080');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
+<!doctype html>
+<html>
+  <head>
+    <title>Web RTS</title>
+    <script src="lib/socket.io.js"></script>
+    <script>
+      /*
+      var socket = io.connect('http://localhost:8080');
+      socket.on('news', function (data) {
+        console.log(data);
+        socket.emit('my other event', { my: 'data' });
+      });
+      */
+    </script>
+  </head>
+  <body>
+    <h1>Web RTS</h1>
+    <canvas id='canvas' width='960' height='540'></canvas>
+    <script src="client/render.js"></script>
+  </body>
+</html>

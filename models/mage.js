@@ -11,7 +11,7 @@
     Mage.name = 'Mage';
 
     function Mage() {
-      Mage.__super__.constructor.call(this, "Mage", 100, 10, 10, 10);
+      Mage.__super__.constructor.call(this, "Mage", 100, 10, 10, 10, 10);
     }
 
     return Mage;

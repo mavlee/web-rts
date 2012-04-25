@@ -11,7 +11,7 @@
     Swordsman.name = 'Swordsman';
 
     function Swordsman() {
-      Swordsman.__super__.constructor.call(this, "Swordsman", 100, 10, 10, 10);
+      Swordsman.__super__.constructor.call(this, "Swordsman", 100, 10, 10, 10, 10);
     }
 
     return Swordsman;

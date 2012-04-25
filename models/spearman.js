@@ -11,7 +11,7 @@
     Spearman.name = 'Spearman';
 
     function Spearman() {
-      Spearman.__super__.constructor.call(this, "Spearman", 100, 10, 10, 10);
+      Spearman.__super__.constructor.call(this, "Spearman", 100, 10, 10, 10, 10);
     }
 
     return Spearman;

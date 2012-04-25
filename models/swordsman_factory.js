@@ -11,7 +11,7 @@
     SwordsmanFactory.name = 'SwordsmanFactory';
 
     function SwordsmanFactory() {
-      SwordsmanFactory.__super__.constructor.call(this, "Swordsman Factory", 100, 10);
+      SwordsmanFactory.__super__.constructor.call(this, "Swordsman Factory", 100, 10, 10);
     }
 
     return SwordsmanFactory;

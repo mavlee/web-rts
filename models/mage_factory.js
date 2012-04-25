@@ -11,7 +11,7 @@
     MageFactory.name = 'MageFactory';
 
     function MageFactory() {
-      MageFactory.__super__.constructor.call(this, "Mage Factory", 100, 10);
+      MageFactory.__super__.constructor.call(this, "Mage Factory", 100, 10, 10);
     }
 
     return MageFactory;

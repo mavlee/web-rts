@@ -6,15 +6,18 @@
 
     Unit.name = 'Unit';
 
-    function Unit(name, l, ms, ar, as) {
+    function Unit(name, l, d, ms, ar, as) {
       this.name = name;
       this.life = l;
+      this.damage = d;
       this.move_speed = ms;
       this.attack_range = ar;
       this.attack_speed = as;
     }
 
     Unit.prototype.life = 0;
+
+    Unit.prototype.damage = 0;
 
     Unit.prototype.move_speed = 0;
 

@@ -11,7 +11,7 @@
     ArcherFactory.name = 'ArcherFactory';
 
     function ArcherFactory() {
-      ArcherFactory.__super__.constructor.call(this, "Archer Factory", 100, 10);
+      ArcherFactory.__super__.constructor.call(this, "Archer Factory", 100, 10, 10);
     }
 
     return ArcherFactory;

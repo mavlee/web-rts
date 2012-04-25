@@ -11,7 +11,7 @@
     Archer.name = 'Archer';
 
     function Archer() {
-      Archer.__super__.constructor.call(this, "Archer", 100, 10, 10, 10);
+      Archer.__super__.constructor.call(this, "Archer", 100, 10, 10, 10, 10);
     }
 
     return Archer;
