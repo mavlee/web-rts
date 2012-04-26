@@ -23,9 +23,9 @@
     function Game() {
       var c, r, _i, _j, _ref, _ref1;
       this.board = [];
-      for (r = _i = 0, _ref = this.ROWS; 0 <= _ref ? _i <= _ref : _i >= _ref; r = 0 <= _ref ? ++_i : --_i) {
+      for (r = _i = 0, _ref = Game.ROWS; 0 <= _ref ? _i <= _ref : _i >= _ref; r = 0 <= _ref ? ++_i : --_i) {
         this.board.push([]);
-        for (c = _j = 0, _ref1 = this.COLS; 0 <= _ref1 ? _j <= _ref1 : _j >= _ref1; c = 0 <= _ref1 ? ++_j : --_j) {
+        for (c = _j = 0, _ref1 = Game.COLUMNS; 0 <= _ref1 ? _j <= _ref1 : _j >= _ref1; c = 0 <= _ref1 ? ++_j : --_j) {
           this.board[r].push(0);
         }
       }

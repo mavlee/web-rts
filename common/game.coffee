@@ -11,9 +11,9 @@ class Game
 
   constructor: () ->
     this.board = []
-    for r in [0..@ROWS]
+    for r in [0..Game.ROWS]
       this.board.push([])
-      for c in [0..@COLS]
+      for c in [0..Game.COLUMNS]
         this.board[r].push(0)
     this.timestamp = (new Date()).getTime()
     this.playerCount = 0
