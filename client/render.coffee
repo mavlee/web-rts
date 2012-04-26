@@ -9,6 +9,6 @@ draw = () ->
   for row in [0..36]
     for col in [0..36]
       if (row % 2 == 0 and col % 2 == 0) or (row % 2 == 1 and col % 2 == 1)
-        canvas.drawImage(img, 0, 0, 200, 200, 45*col, row*22.5, 45, 45)
+        canvas.drawImage(img, 0, 0, 200, 200, 36*col, row*21, 45, 45)
       
 setInterval(draw, 40)

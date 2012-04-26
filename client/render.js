@@ -18,7 +18,7 @@
         _results1 = [];
         for (col = _j = 0; _j <= 36; col = ++_j) {
           if ((row % 2 === 0 && col % 2 === 0) || (row % 2 === 1 && col % 2 === 1)) {
-            _results1.push(canvas.drawImage(img, 0, 0, 200, 200, 45 * col, row * 22.5, 45, 45));
+            _results1.push(canvas.drawImage(img, 0, 0, 200, 200, 36 * col, row * 21, 45, 45));
           } else {
             _results1.push(void 0);
           }
