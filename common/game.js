@@ -57,6 +57,10 @@
 
   })();
 
-  window.Game = Game;
+  if (typeof global === void 0) {
+    window.Game = Game;
+  }
+
+  exports.Game = Game;
 
 }).call(this);
