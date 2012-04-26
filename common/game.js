@@ -48,4 +48,6 @@
 
   })();
 
+  window.Game = Game;
+
 }).call(this);

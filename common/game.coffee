@@ -36,3 +36,5 @@ class Game
 
   getPlayerCount() ->
     return
+
+window.Game = Game
