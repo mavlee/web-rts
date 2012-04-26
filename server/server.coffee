@@ -1,9 +1,9 @@
 Game = require('../common/game.js').Game
 Unit = require('../models/unit.js').Unit
 Mage = require('../models/mage.js').Mage
-#Archer = require('../models/archer.js')
-#Swordsman = require('../models/swordsman.js')
-#Spearman = require('../models/spearman.js')
+Archer = require('../models/archer.js').Archer
+Swordsman = require('../models/swordsman.js').Swordsman
+Spearman = require('../models/spearman.js').Spearman
 
 io = require('socket.io').listen(8080)
 playerCount = 0
