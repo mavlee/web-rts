@@ -18,6 +18,8 @@
 
     Game.prototype.timestamp = null;
 
+    Game.prototype.playerCount = 0;
+
     function Game() {
       var c, r, _i, _j, _ref, _ref1;
       this.board = [];
@@ -28,6 +30,7 @@
         }
       }
       this.timestamp = (new Date()).getTime();
+      this.playerCount = 0;
     }
 
     Game.prototype.save = function() {};
@@ -38,11 +41,17 @@
 
     Game.prototype.update = function() {};
 
-    Game.prototype.playerJoin = function() {};
+    Game.prototype.playerJoin = function() {
+      this.playerCount++;
+    };
 
-    Game.prototype.playerLeave = function() {};
+    Game.prototype.playerLeave = function() {
+      this.playerCount--;
+    };
 
-    getPlayerCount()(function() {});
+    Game.prototype.getPlayerCount = function() {
+      return this.playerCount;
+    };
 
     return Game;
 

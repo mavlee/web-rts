@@ -7,15 +7,14 @@
   playerCount = 0;
 
   io.sockets.on('connection', function(socket) {
-    playerCount++;
-    console.log('player join');
     setInterval(function() {
       return socket.emit('cycle', {
         "players": playerCount
       });
     }, 2000);
-    socket.on('test', function(data) {
-      return console.log(data);
+    socket.on('playerJoin', function(socket) {
+      playerCount++;
+      return console.log('player join');
     });
     return socket.on('disconnect', function(socket) {
       playerCount--;

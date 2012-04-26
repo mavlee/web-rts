@@ -7,6 +7,7 @@ class Game
 
   board: null
   timestamp: null
+  playerCount: 0
 
   constructor: () ->
     this.board = []
@@ -15,6 +16,7 @@ class Game
       for c in [0..@COLS]
         this.board[r].push(0)
     this.timestamp = (new Date()).getTime()
+    this.playerCount = 0
 
   save: () ->
     return
@@ -29,12 +31,14 @@ class Game
     return
 
   playerJoin: () ->
+    this.playerCount++
     return
 
   playerLeave: () ->
+    this.playerCount--
     return
 
-  getPlayerCount() ->
-    return
+  getPlayerCount: () ->
+    return this.playerCount
 
 window.Game = Game

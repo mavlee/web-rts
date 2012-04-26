@@ -4,6 +4,10 @@
 
   socket = io.connect('http://localhost:8080');
 
+  socket.on('connect', function() {
+    return socket.emit('playerJoin', null);
+  });
+
   socket.on('cycle', function(data) {
     return console.log(data);
   });
