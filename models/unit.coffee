@@ -14,4 +14,7 @@ class Unit
   attack_speed: 0
   owner_id: 0
 
-window.Unit = Unit
+if typeof global == "undefined"
+  window.Unit = Unit
+else
+  exports.Unit = Unit

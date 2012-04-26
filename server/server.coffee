@@ -1,8 +1,14 @@
-g = require('../common/game.js')
+Game = require('../common/game.js').Game
+Unit = require('../models/unit.js').Unit
+Mage = require('../models/mage.js').Mage
+#Archer = require('../models/archer.js')
+#Swordsman = require('../models/swordsman.js')
+#Spearman = require('../models/spearman.js')
+
 io = require('socket.io').listen(8080)
 playerCount = 0
 
-game = new g.Game()
+game = new Game()
 
 io.sockets.on('connection', (socket) ->
   setInterval(() ->
@@ -13,6 +19,7 @@ io.sockets.on('connection', (socket) ->
   socket.on('playerJoin', (socket) ->
     playerCount++
     console.log('player join')
+    test = new Mage(0)
   )
 
   socket.on('disconnect', (socket) ->

@@ -18,6 +18,10 @@
 
   })(Unit);
 
-  window.Swordsman = Swordsman;
+  if (typeof global === "undefined") {
+    window.Swordsman = Swordsman;
+  } else {
+    exports.Swordsman = Swordsman;
+  }
 
 }).call(this);

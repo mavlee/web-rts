@@ -32,6 +32,10 @@
 
   })();
 
-  window.Unit = Unit;
+  if (typeof global === "undefined") {
+    window.Unit = Unit;
+  } else {
+    exports.Unit = Unit;
+  }
 
 }).call(this);

@@ -41,6 +41,7 @@ class Game
   getPlayerCount: () ->
     return this.playerCount
 
-if typeof global == undefined
+if typeof global == "undefined"
   window.Game = Game
-exports.Game = Game
+else
+  exports.Game = Game

@@ -18,6 +18,10 @@
 
   })(Unit);
 
-  window.Spearman = Spearman;
+  if (typeof global === "undefined") {
+    window.Spearman = Spearman;
+  } else {
+    exports.Spearman = Spearman;
+  }
 
 }).call(this);

@@ -18,6 +18,10 @@
 
   })(Unit);
 
-  window.Archer = Archer;
+  if (typeof global === "undefined") {
+    window.Archer = Archer;
+  } else {
+    exports.Archer = Archer;
+  }
 
 }).call(this);

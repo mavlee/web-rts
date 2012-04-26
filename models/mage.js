@@ -16,8 +16,12 @@
 
     return Mage;
 
-  })(Unit);
+  })(Unit || require('../models/unit.js').Unit);
 
-  window.Mage = Mage;
+  if (typeof global === "undefined") {
+    window.Mage = Mage;
+  } else {
+    exports.Mage = Mage;
+  }
 
 }).call(this);

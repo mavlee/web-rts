@@ -57,10 +57,10 @@
 
   })();
 
-  if (typeof global === void 0) {
+  if (typeof global === "undefined") {
     window.Game = Game;
+  } else {
+    exports.Game = Game;
   }
-
-  exports.Game = Game;
 
 }).call(this);
