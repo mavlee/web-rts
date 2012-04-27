@@ -12,9 +12,9 @@ class Renderer
     this.canvas.clearRect(0, 0, 960, 540)
     this.canvas.fillStyle = "#000"
     this.canvas.strokeStyle = "#000"
-    for row in [0..game.board.length]
-      for col in [0..game.board[row].length]
+    for row in [0..this.game.board.length-1]
+      for col in [0..this.game.board[row].length-1]
         if (row % 2 == 0 and col % 2 == 0) or (row % 2 == 1 and col % 2 == 1)
-          canvas.drawImage(img, 0, 0, 200, 200, 36*col, row*21, 45, 45)
-      
-setInterval(draw, 40)
+          this.canvas.drawImage(img, 0, 0, 200, 200, 36*col, row*21, 45, 45)
+
+window.Renderer = Renderer
