@@ -16,5 +16,7 @@ class Renderer
       for col in [0..this.game.board[row].length-1]
         if (row % 2 == 0 and col % 2 == 0) or (row % 2 == 1 and col % 2 == 1)
           this.canvas.drawImage(img, 0, 0, 200, 200, 36*col, row*21, 45, 45)
+          if this.game.board[row][col] != 0
+            this.canvas.fillRect(36*col, row*21, 20, 20)
 
 window.Renderer = Renderer

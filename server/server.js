@@ -22,16 +22,30 @@
 
   io.sockets.on('connection', function(socket) {
     setInterval(function() {
-      socket.emit('cycle', {
+      return socket.emit('cycle', {
         "players": playerCount
       });
-      return console.log(game);
     }, 2000);
     socket.on('playerJoin', function(socket) {
       var test;
       playerCount++;
       console.log('player join');
-      return test = new Mage(0);
+      test = new Mage(0);
+      if (game.board[4][4] === 0) {
+        game.board[4][4] = test;
+        return io.sockets.emit('new piece', {
+          "row": 4,
+          "col": 4,
+          "piece": test
+        });
+      } else {
+        game.board[8][8] = test;
+        return io.sockets.emit('new piece', {
+          "row": 8,
+          "col": 8,
+          "piece": test
+        });
+      }
     });
     return socket.on('disconnect', function(socket) {
       playerCount--;

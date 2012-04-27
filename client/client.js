@@ -20,4 +20,9 @@
     return console.log(data);
   });
 
+  socket.on('new piece', function(data) {
+    game.board[data['row']][data['col']] = data['piece'];
+    return console.log(data);
+  });
+
 }).call(this);

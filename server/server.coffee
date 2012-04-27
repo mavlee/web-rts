@@ -13,13 +13,18 @@ game = new Game()
 io.sockets.on('connection', (socket) ->
   setInterval(() ->
     socket.emit('cycle', {"players": playerCount})
-    console.log(game)
   , 2000)
 
   socket.on('playerJoin', (socket) ->
     playerCount++
     console.log('player join')
     test = new Mage(0)
+    if game.board[4][4] == 0
+      game.board[4][4] = test
+      io.sockets.emit('new piece', {"row": 4, "col": 4, "piece": test})
+    else
+      game.board[8][8] = test
+      io.sockets.emit('new piece', {"row": 8, "col": 8, "piece": test})
   )
 
   socket.on('disconnect', (socket) ->

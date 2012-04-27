@@ -15,3 +15,8 @@ socket.on('connect', () ->
 socket.on('cycle', (data) ->
   console.log(data)
 )
+
+socket.on('new piece', (data) ->
+  game.board[data['row']][data['col']] = data['piece']
+  console.log(data)
+)
