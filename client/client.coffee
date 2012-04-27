@@ -17,6 +17,11 @@ socket.on('load game', (data) ->
   game.load(data)
 )
 
+socket.on('receive id', (data) ->
+  game.setPlayerId(data['id'])
+  console.log(data)
+)
+
 socket.on('cycle', (data) ->
   console.log(data)
 )

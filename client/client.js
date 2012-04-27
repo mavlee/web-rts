@@ -21,6 +21,11 @@
     return game.load(data);
   });
 
+  socket.on('receive id', function(data) {
+    game.setPlayerId(data['id']);
+    return console.log(data);
+  });
+
   socket.on('cycle', function(data) {
     return console.log(data);
   });

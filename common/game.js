@@ -18,6 +18,8 @@
 
     Game.prototype.timestamp = null;
 
+    Game.prototype.playerId = 0;
+
     Game.prototype.playerCount = 0;
 
     function Game() {
@@ -53,12 +55,16 @@
 
     Game.prototype.update = function() {};
 
+    Game.prototype.setPlayerId = function(id) {
+      return this.playerId = id;
+    };
+
     Game.prototype.playerJoin = function() {
-      this.playerCount++;
+      return this.playerCount++;
     };
 
     Game.prototype.playerLeave = function() {
-      this.playerCount--;
+      return this.playerCount--;
     };
 
     Game.prototype.getPlayerCount = function() {

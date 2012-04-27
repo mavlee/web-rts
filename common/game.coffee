@@ -7,6 +7,7 @@ class Game
 
   board: null
   timestamp: null
+  playerId: 0
   playerCount: 0
 
   constructor: () ->
@@ -36,13 +37,14 @@ class Game
   update: () ->
     return
 
+  setPlayerId: (id) ->
+    this.playerId = id
+
   playerJoin: () ->
     this.playerCount++
-    return
 
   playerLeave: () ->
     this.playerCount--
-    return
 
   getPlayerCount: () ->
     return this.playerCount
