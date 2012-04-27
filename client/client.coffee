@@ -12,6 +12,11 @@ socket.on('connect', () ->
   socket.emit('playerJoin', null)
 )
 
+socket.on('load game', (data) ->
+  console.log(data)
+  game.load(data)
+)
+
 socket.on('cycle', (data) ->
   console.log(data)
 )

@@ -33,9 +33,21 @@
       this.playerCount = 0;
     }
 
-    Game.prototype.save = function() {};
+    Game.prototype.save = function() {
+      var data;
+      data = {
+        'board': this.board,
+        'timestamp': this.timestamp,
+        'playerCount': this.playerCount
+      };
+      return data;
+    };
 
-    Game.prototype.load = function() {};
+    Game.prototype.load = function(data) {
+      this.board = data['board'];
+      this.timestamp = data['timestamp'];
+      return this.playerCount = data['playerCount'];
+    };
 
     Game.prototype.computeState = function() {};
 

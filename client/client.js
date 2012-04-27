@@ -16,6 +16,11 @@
     return socket.emit('playerJoin', null);
   });
 
+  socket.on('load game', function(data) {
+    console.log(data);
+    return game.load(data);
+  });
+
   socket.on('cycle', function(data) {
     return console.log(data);
   });

@@ -6,17 +6,14 @@ Swordsman = require('../models/swordsman.js').Swordsman
 Spearman = require('../models/spearman.js').Spearman
 
 io = require('socket.io').listen(8080)
-playerCount = 0
 
 game = new Game()
 
 io.sockets.on('connection', (socket) ->
-  setInterval(() ->
-    socket.emit('cycle', {"players": playerCount})
-  , 2000)
+  socket.emit('load game', game.save())
 
   socket.on('playerJoin', (socket) ->
-    playerCount++
+    game.playerJoin()
     console.log('player join')
     test = new Mage(0)
     if game.board[4][4] == 0
@@ -28,7 +25,7 @@ io.sockets.on('connection', (socket) ->
   )
 
   socket.on('disconnect', (socket) ->
-    playerCount--
+    game.playerLeave()
     console.log('player left')
   )
 )

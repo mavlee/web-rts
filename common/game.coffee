@@ -19,10 +19,16 @@ class Game
     this.playerCount = 0
 
   save: () ->
-    return
+    data =
+      'board': this.board
+      'timestamp': this.timestamp
+      'playerCount': this.playerCount
+    return data
 
-  load: () ->
-    return
+  load: (data) ->
+    this.board = data['board']
+    this.timestamp = data['timestamp']
+    this.playerCount = data['playerCount']
 
   computeState: () ->
     return
