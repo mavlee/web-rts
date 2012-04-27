@@ -24,7 +24,7 @@
       var test;
       game.playerJoin();
       console.log('player join');
-      test = new Mage(0);
+      test = new Swordsman(0);
       if (game.board[4][4] === 0) {
         game.board[4][4] = test;
         return io.sockets.emit('new piece', {

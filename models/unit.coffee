@@ -28,7 +28,7 @@ class Unit
       return true
     return false
 
-  if typeof global == "undefined"
+if typeof global == "undefined"
   window.Unit = Unit
 else
   exports.Unit = Unit
