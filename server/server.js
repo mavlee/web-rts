@@ -20,11 +20,6 @@
 
   io.sockets.on('connection', function(socket) {
     socket.emit('load game', game.save());
-    setInterval(function() {
-      return socket.emit('cycle', {
-        "players": game.getPlayerCount()
-      });
-    }, 2000);
     socket.on('playerJoin', function(socket) {
       var test;
       game.playerJoin();

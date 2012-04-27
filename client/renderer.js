@@ -31,7 +31,7 @@
             if ((row % 2 === 0 && col % 2 === 0) || (row % 2 === 1 && col % 2 === 1)) {
               this.canvas.drawImage(img, 0, 0, 200, 200, 36 * col, row * 21, 45, 45);
               if (this.game.board[row][col] !== 0) {
-                _results1.push(this.canvas.fillRect(36 * col, row * 21, 20, 20));
+                _results1.push(this.canvas.fillRect(36 * col + 10, row * 21 + 10, 25, 25));
               } else {
                 _results1.push(void 0);
               }

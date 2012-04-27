@@ -15,7 +15,7 @@ io.sockets.on('connection', (socket) ->
   socket.on('playerJoin', (socket) ->
     game.playerJoin()
     console.log('player join')
-    test = new Mage(0)
+    test = new Swordsman(0)
     if game.board[4][4] == 0
       game.board[4][4] = test
       io.sockets.emit('new piece', {"row": 4, "col": 4, "piece": test})
